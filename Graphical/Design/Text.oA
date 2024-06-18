@@ -1,0 +1,4 @@
+Text {
+    font: width > 400 ? "Graphical/Resources/Fonts/font22.xml" : "Graphical/Resources/Fonts/font14.xml"
+    center: true
+}

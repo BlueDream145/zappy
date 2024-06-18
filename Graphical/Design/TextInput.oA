@@ -1,0 +1,10 @@
+TextInput {
+    font: width > 400 ? "Graphical/Resources/Fonts/font22.xml" : "Graphical/Resources/Fonts/font14.xml"
+    fontColor: "white"
+    color: "grey"
+
+    Image {
+        source: "Graphical/Resources/border.png"
+        relativeSize: 1, 1
+    }
+}

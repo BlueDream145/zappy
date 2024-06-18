@@ -1,0 +1,53 @@
+Item {
+    Title {
+        text: "Please connect to server"
+    }
+
+    Text {
+        text: "Hostname"
+        relativePos: 0.5, 0.3
+        relativeSize: 0.5, 0.1
+    }
+
+    TextInput {
+        id: ip
+        relativePos: 0.5, 0.4
+        relativeSize: 0.6, 0.11
+        maxLength: 15
+        text: "127.0.0.1"
+    }
+
+    Text {
+        text: "Port"
+        relativePos: 0.5, 0.55
+        relativeSize: 0.5, 0.1
+    }
+
+    TextInput {
+        id: port
+        relativePos: 0.5, 0.65
+        relativeSize: 0.4, 0.11
+        maxLength: 4
+        text: "4242"
+    }
+
+    Button {
+        text: "Connect"
+        relativeSize: 0.3, 0.1
+        relativePos: 0.5, 0.8
+
+        on released {
+            gameScreen.ip = ip.text
+            gameScreen.port = port.text
+            gameScreen.tryConnect()
+            menus.index = (gameScreen.connected ? menus.game : menus.connect)
+        }
+    }
+
+    Text {
+        relativePos: 0.5, 0.95
+        relativeSize: 0.1, 0.1
+        fontColor: "orange"
+        text: gameScreen.error
+    }
+}

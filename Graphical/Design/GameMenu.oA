@@ -1,0 +1,22 @@
+Item {
+    relativeSize: 1, 1
+
+    GameScreen {
+        id: gameScreen
+        relativeSize: 0.95, 0.95
+        relativePos: 0.5, 0.5
+    }
+
+    Button {
+        text: "X"
+        width: 50
+        height: 50
+        color: pressed ? "lightred" : hovered ? "red" : "darkred"
+        transparency: 0.4
+
+        on released {
+            gameScreen.disconnect()
+            menus.index = menus.connect
+        }
+    }
+}

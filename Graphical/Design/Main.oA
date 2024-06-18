@@ -1,0 +1,22 @@
+Window {
+    id: wnd
+    resizable: true
+    color: "grey"
+
+    MenuHandler {
+        property connect: 0
+        property game: 1
+
+        id: menus
+        relativeSize: 1, 1
+
+        ConnectMenu {
+            relativeSize: 1, 1
+        }
+
+        GameMenu {
+            id: gameMenu
+            relativeSize: 1, 1
+        }
+    }
+}

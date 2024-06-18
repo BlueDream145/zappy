@@ -1,0 +1,5 @@
+Text {
+    relativeSize: 1, 0.2
+    center: true
+    font: width > 900 ? "Graphical/Resources/Fonts/font34.xml" : "Graphical/Resources/Fonts/font18.xml"
+}
